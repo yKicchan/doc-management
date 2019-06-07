@@ -6,6 +6,24 @@ Yukiya Murata
 
 ---
 
+## おまえ誰やねん
+
+>>>
+
+![img](https://avatars0.githubusercontent.com/u/27273218?s=460&v=4)
+
+```ts
+interface Me extends Person {
+  name: "村田 征哉"
+  company: "Fenrir Inc."
+  job: "Web engineer"
+  favorite: "花澤香菜" | "Persona5" | "ピカチュウ"
+  skills: "React" | "Laravel" | "Vue.js" | "Nuxt.js" | "Go"
+} as const
+```
+
+---
+
 ## case 1.
 # 基本設計書
 
