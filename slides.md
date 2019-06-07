@@ -6,7 +6,7 @@ Yukiya Murata
 
 ---
 
-## おまえ誰やねん
+## おまえ誰やねん🤔
 
 >>>
 
@@ -25,9 +25,11 @@ interface Me extends Person {
 ---
 
 ## case 1.
-# 基本設計書
+# 画面設計書
 
-詳細設計書や画面設計書なども
+>>>
+
+![img](img/disp-doc.png)
 
 >>>
 
@@ -36,11 +38,11 @@ interface Me extends Person {
 
 >>>
 
-IT業界に蔓延るExcel設計書は...
+### IT業界に蔓延るExcel設計書は...
 
 >>>
 
-日々エンジニアたちのHPを着々と削っている...
+日々エンジニアのSAN値をゴリゴリ削っている...
 
 (主にわい)
 
@@ -94,10 +96,33 @@ Aさん
 
 >>>
 
+```uml
+@startuml
+(*) -down-> "IDとパスワードを入力"
+
+if "認証" then
+  -down->[成功]"ログイン処理"
+  -down-> "ダッシュボード表示"
+  -down->(*)
+else
+  -right->[失敗]"エラー表示"
+  note right: IDまたはパスワードが違います
+  -up->"IDとパスワードを入力"
+endif
+
+@enduml
+```
+
+>>>
+
+![img](img/uml.png)
+
+>>>
+
 ### [`PlantUML`](http://plantuml.com)
 
-- DSL記述でUMLを作成可能
-- UMLをpng出力できる
+- DSL記述でほとんどのUMLを作成可能
+- 記述したUMLを画像出力できる
 - MarkdownやAsciiDocと合わせて設計書が作れる
 - 主要エディタに拡張機能あり
 
@@ -146,7 +171,13 @@ IT業界に蔓延るExcel設計書は...
 
 # [`OpenAPI`](https://www.openapis.org/)
 
-[Swagger](https://swagger.io/specification/)
+\ﾄﾞﾝｯ/
+
+>>>
+
+## [例](https://editor.swagger.io/)
+
+![img](img/swagger.png)
 
 >>>
 
@@ -154,7 +185,8 @@ IT業界に蔓延るExcel設計書は...
 
 - YAML, JSON で記述可能
 - SwaggerUIからAPIの単体テストが可能
-- ソースからスタブ・クライアントを自動作成
+- 設計からスタブ・クライアントを自動作成
+- 逆にコードからの設計書出力も物によっては可能
 - オンラインエディタあり
 - 主要エディタに拡張機能あり
 
@@ -167,6 +199,11 @@ IT業界に蔓延るExcel設計書は...
 # [`API Blueprint`](https://apiblueprint.org/)
 
 \ﾄﾞﾝｯ/
+
+>>>
+
+## [例](https://apiblueprint.org/documentation/examples/)
+![img](img/apiblueprint.png)
 
 ---
 
@@ -195,6 +232,25 @@ IT業界に蔓延るExcel設計書は...
 
 >>>
 
+# [`Marp`](https://yhatt.github.io/marp/)
+
+\ﾄﾞﾝｯ/
+
+>>>
+
+![img](img/marp.png)
+
+>>>
+
+### [`Marp`](https://yhatt.github.io/marp/)
+
+- Markdownで記述可能
+- 爆速スライド作成
+- 専用のエディタあり
+- PDFにエクスポート
+
+>>>
+
 # [REVEAL.JS](https://revealjs.com)
 
 \ﾄﾞﾝｯ/
@@ -204,27 +260,9 @@ IT業界に蔓延るExcel設計書は...
 ### [REVEAL.JS](https://revealjs.com)
 
 - HTML, Markdown で記述可能
-- 爆速スライド作成が可能
+- 爆速スライド作成
 - 色合いがいい感じにオサレ(素人目線)
 - プラットフォームに依存しない
-
->>>
-
-追いスライド作成ツール
-
->>>
-
-# [`Marp`](https://yhatt.github.io/marp/)
-
-\ﾄﾞﾝｯ/
-
->>>
-
-### [`Marp`](https://yhatt.github.io/marp/)
-
-- Markdownで記述可能
-- 専用のエディタあり
-- PDFにエクスポート
 
 ---
 
@@ -246,7 +284,7 @@ IT業界に蔓延るExcel設計書は...
 
 ---
 
-自分にあったツールを見つけて
+使いやすいツールを見つけて
 
 どんどん楽していきましょう！
 
