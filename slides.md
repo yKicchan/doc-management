@@ -15,11 +15,12 @@ Yukiya Murata
 ```ts
 interface Me extends Person {
   name: "村田 征哉"
+  twitter: "@yKicchan"
   company: "Fenrir Inc."
   job: "Web engineer"
   favorite: "花澤香菜" | "Persona5" | "ピカチュウ"
   skills: "React" | "Laravel" | "Vue.js" | "Nuxt.js" | "Go"
-} as const
+}
 ```
 
 ---
