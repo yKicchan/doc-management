@@ -23,6 +23,10 @@ interface Me extends Person {
 }
 ```
 
+>>>
+
+## [こんなんもらったよ](https://pbs.twimg.com/media/D3FbsbPU0AA0Csr.jpg:large)
+
 ---
 
 ## case 1.
